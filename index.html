@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CoolDong's life</title>
+  <title>CoolDong's life~!</title>
   <meta charset="utf-8">
 </head>
 <body>
-  <h1><a href="index.html">CoolDong's Life</h1>
+  <h1><a href="index.html">CoolDong's Life</a></h1>
+    <input type="button" value="night" style="width:50pt;height:25pt;" onclick="
+    var target = document.querySelector('body');
+    if (this.value==='night'){
+      target.style.backgroundColor='black';
+      target.style.color='white';
+      this.value='day'
+
+      var links = document.querySelectorAll('a');
+      var i = 0;
+      while(i<links.length){
+          links[i].style.color='powederblue';
+          i=i+1;
+      }
+
+    }else{
+      target.style.backgroundColor='white';
+      target.style.color='black';
+      this.value='night'
+    }
+    ">
   <ol>
     <li><a href="Trigger.html">Trigger</a></li>
     <li><a href="Bolt.html">Bolt</a></li>
@@ -15,7 +35,7 @@
     <li><a href="script.html">script</a></li>
   </ol>
   <h1>Introduce</h1>
-  <h3></h3>
+
   <p style="margin-top:30px">
     Hi, I'm Cooldong!<br> Let me introduce myself.
     Before I learn Mechanical Engineering.<br>
@@ -35,14 +55,6 @@
     After several challenges that break and build, now I made first result.<br>
     That will show in my test web page.
   </p>
-    <script src="https://utteranc.es/client.js"
-            repo="DongHeeLim/comments"
-            issue-term="pathname"
-            label="comments"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
 
 </body>
 </html>
