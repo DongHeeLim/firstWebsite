@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>CoolDong's life~!</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW8YK33GNJ"></script>
   <script>
@@ -10,9 +13,6 @@
 
     gtag('config', 'G-NW8YK33GNJ');
   </script>
-  
-  <title>CoolDong's life~!</title>
-  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="padding.css"/>
   <style>
     .js{
@@ -29,37 +29,7 @@
       color:green;
     }
   </style>
-  <script>
-    function setLinkColor(color){
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i<alist.length){
-          alist[i].style.color=color;
-          i=i+1;
-      }
-    }
-    function setTextColor(color){
-      var target = document.querySelector('body');
-      target.style.color=color;
-    }
-    function setBackgroundColor(color){
-      var target = document.querySelector('body');
-      target.style.backgroundColor=color;
-    }
-    function nightDayHandler(self){
-      if (self.value==='night'){
-        setBackgroundColor('black');
-        setTextColor('white');
-        setLinkColor('powderblue');
-        self.value='day';
-      }else{
-        setBackgroundColor('white');
-        setTextColor('black');
-        setLinkColor('blue');
-        self.value='night';
-      }
-    }
-  </script>
+  <script src="colors.js"></script>
 </head>
 <body>
 <div id="_padding">
