@@ -4,31 +4,33 @@
   <title>CoolDong's life~!</title>
   <meta charset="utf-8">
   <script>
-    function nightDayHandler(self){
+    function setLinkColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+          alist[i].style.color=color;
+          i=i+1;
+      }
+    }
+    function setTextColor(color){
       var target = document.querySelector('body');
+      target.style.color=color;
+    }
+    function setBackgroundColor(color){
+      var target = document.querySelector('body');
+      target.style.backgroundColor=color;
+    }
+    function nightDayHandler(self){
       if (self.value==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
+        setBackgroundColor('black');
+        setTextColor('white');
+        setLinkColor('powderblue');
         self.value='day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color='powderblue';
-            i=i+1;
-        }
-
       }else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
+        setBackgroundColor('white');
+        setTextColor('black');
+        setLinkColor('blue');
         self.value='night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color='blue';
-            i=i+1;
-        }
       }
     }
   </script>
